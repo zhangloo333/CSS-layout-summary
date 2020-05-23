@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Css center summary</title>
+  <style>
+    #parent {
+      width: 100%;
+      height: 200px;
+      background-color: gray;
+      /**
+      * text-align 属性：是为了文本内容设置对齐方式
+       left: 左对题
+       center:集中对齐
+       right：右对齐
+      */
+      text-align: center;
+
+    }
+
+    #child {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      /*
+      * display property:
+          block: 快极元素
+          inline: 内联元素 (text-algin属性是有效的)
+            * width 和height属性是无效的
+          inline-block:行内块极元素（块极 + 内链）
+            * block的特点，就是width and heigh 是有效的
+      */
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="parent">
+    <div id="child">css horizontal center summary</div>
+  </div>
+</body>
+
+</html>
