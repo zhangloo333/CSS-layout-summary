@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Css center summary</title>
+  <style>
+    #parent {
+      width: 100%;
+      height: 200px;
+      background-color: gray;
+
+      /**
+      *开启定位
+      * absolute, relative, fix 都是开启定位
+      */
+      position: relative;
+    }
+
+    #child {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      /**
+      * 当把当前元素设置为绝对定位之后
+      * 如果parent 元素没有开启定位的话，当前的元素是相对于页面定位的
+      * 如果腹肌元素开启了定位的话，当前元素是相对于parent 元素定位的
+      */
+      position: absolute;
+      left: 50%;
+      /**
+        *left 50% 是指children的边离paerent 50%，但是right 是包含children本身的宽度的，所以我们需要调整
+        * transform属性可以让 图片随着left和right 进行平移 移动应为原来的一半 width/2 = -100px 
+       * /
+      /* transform: translateX(-100px); */
+      transform: translateX(-50%);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="parent">
+    <div id="child">center </div>
+  </div>
+</body>
+
+</html>
