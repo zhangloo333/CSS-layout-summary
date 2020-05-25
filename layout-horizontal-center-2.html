@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Css center summary</title>
+  <style>
+    #parent {
+      width: 100%;
+      height: 200px;
+      background-color: gray;
+    }
+
+    #child {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      /**
+       * display as table or block 都是可一个
+      */
+      display: table;
+      /**
+      * auto 是 browser 自动的分配，一般时候等宽的分配
+      */
+      margin: 0 auto;
+      /***
+      * 当children 脱离文档流之后就没有效果了
+      */
+      /* position: absolute; */
+    }
+  </style>
+</head>
+
+<body>
+  <div id="parent">
+    <div id="child">center </div>
+  </div>
+</body>
+
+</html>
